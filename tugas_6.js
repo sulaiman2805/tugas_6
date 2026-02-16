@@ -20,5 +20,17 @@ function sewaLapangan(jenisLapangan, durasiSewa) {
 }
 
 const lapangan = [
-        {jenis: "lap"}
-    ]
+        {jenis: "lapanganFutsal", durasi:3},
+        {jenis: "lapanganFutsal", durasi:1},
+        {jenis: "lapanganBadminton", durasi:2},
+        {jenis: "lapanganBadminton", durasi:4},
+        {jenis: "lapanganBadminton", durasi:1},
+];
+
+let totalBiayaSewa = 0;
+
+for (let i = 0; i < lapangan.length; i++) {
+    totalBiayaSewa += sewaLapangan(lapangan[i].jenis, lapangan[i].durasi);
+}
+
+console.log("Total Biaya Sewa: Rp. " + totalBiayaSewa);
