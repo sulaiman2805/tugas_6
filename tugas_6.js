@@ -1,8 +1,25 @@
+// Identifikasi nama lapangan dan biaya
+console.log("Selamat datang di GOR ABC. Berikut adalah harga sewa lapangan kami");
+
+function gorABC(namaLapangan, biayaLapangan, biayaberikutnya) {
+    const daftarLapangan = `Ini adalah ${namaLapangan}, dengan harga ${biayaLapangan}, & biaya 1 jam berikutnya adalah ${biayaberikutnya}`;
+    return daftarLapangan;
+}
+
+const lapangan1 = gorABC("Lapangan Futsal",80000,50000);
+console.log(lapangan1);
+
+const lapangan2 = gorABC("Lapangan Badminton",40000,25000);
+console.log(lapangan2);
+
 // Total Keseluruhan Lapangan
+
+console.log("Total Biaya Sewa Lapangan Perusahaan ABC");
+
 function sewaLapangan(jenisLapangan, durasiSewa) {
     const biayaSewa = {
         lapanganFutsal: { sewaPertama: 80000, sewaJamBerikutnya: 50000 },
-        lapanganBadminton: { sewaPertama: 80000, sewaJamBerikutnya: 50000 },
+        lapanganBadminton: { sewaPertama: 40000, sewaJamBerikutnya: 25000 },
     }
 
     if (jenisLapangan == "lapanganFutsal") {
@@ -61,4 +78,4 @@ for (let i = 0; i < semuaLapangan.length; i++) {
     totalBiayaSewa += sewaLapangan(semuaLapangan[i].jenis, semuaLapangan[i].durasi);
 }
 
-console.log("Total Biaya Sewa: Rp. " + totalBiayaSewa);
+console.log("Total Keseluruhan: Rp. " + totalBiayaSewa);
