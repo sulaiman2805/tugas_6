@@ -43,12 +43,16 @@ const nomorFutsal = [
     { nomorLapangan: "lapanganNomor2", durasi: 1 },
 ];
 
+let totalFutsal = 0;
+
 // Lapangan Bandminton 
 const nomorBadminton = [
     { nomorBadminton: "lapanganBadminton", durasi: 2 },
     { nomorBadminton: "lapanganBadminton", durasi: 4 },
     { nomorBadminton: "lapanganBadminton", durasi: 1 },
 ];
+
+let totalBadminton = 0;
 
 // Semua Lapangan
 const semuaLapangan = [
@@ -63,15 +67,15 @@ let totalBiayaSewa = 0;
 
 // Biaya Keseluruhan
 for (let i = 0; i < nomorFutsal.length; i++) {
-    totalBiayaSewa += sewaLapangan(nomorFutsal[i].jenis, nomorFutsal[i].durasi);
+    totalFutsal += sewaLapangan(nomorFutsal[i].nomorLapangan, nomorFutsal[i].durasi);
 }
-console.log("Total Biaya Lapangan Futsal: Rp. " + totalBiayaSewa);
+console.log("Total Biaya Lapangan Futsal: Rp. " + totalFutsal);
 
 // Lapangan Badminton
 for (let i = 0; i < nomorBadminton.length; i++) {
-    totalBiayaSewa += sewaLapangan(nomorBadminton[i].jenis, nomorBadminton[i].durasi);
+    totalBadminton += sewaLapangan(nomorBadminton[i].nomorBadminton, nomorBadminton[i].durasi);
 }
-console.log("Total Biaya Lapangan Badminton: Rp. " + totalBiayaSewa);
+console.log("Total Biaya Lapangan Badminton: Rp. " + totalBadminton);
 
 // Biaya Keseluruhan
 for (let i = 0; i < semuaLapangan.length; i++) {
