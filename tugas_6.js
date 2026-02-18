@@ -39,8 +39,8 @@ function sewaLapangan(jenisLapangan, durasiSewa) {
 
 // Lapangan Futsal
 const nomorFutsal = [
-    { nomorLapangan: "lapanganNomor1", durasi: 3 },
-    { nomorLapangan: "lapanganNomor2", durasi: 1 },
+    { nomorFutsal: "lapanganFutsal", durasi: 3 },
+    { nomorFutsal: "lapanganFutsal", durasi: 1 },
 ];
 
 let totalFutsal = 0;
@@ -67,7 +67,7 @@ let totalBiayaSewa = 0;
 
 // Biaya Keseluruhan
 for (let i = 0; i < nomorFutsal.length; i++) {
-    totalFutsal += sewaLapangan(nomorFutsal[i].nomorLapangan, nomorFutsal[i].durasi);
+    totalFutsal += sewaLapangan(nomorFutsal[i].nomorFutsal, nomorFutsal[i].durasi);
 }
 console.log("Total Biaya Lapangan Futsal: Rp. " + totalFutsal);
 
